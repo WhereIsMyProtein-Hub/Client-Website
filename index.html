@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Where Is My Protein? — a protein-focused café for nourishing breakfasts, brunch and feel-good food.">
+  <title>Where Is My Protein? | Protein Café</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="announcement">FUEL YOUR DAY RIGHT <span>•</span> FRESHLY PREPARED <span>•</span> GOOD FOOD, GOOD VIBES</div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Where Is My Protein home">
+      <img src="assets/logo.png" alt="Where Is My Protein café logo">
+      <span><b>WHERE IS MY</b><strong>PROTEIN?</strong></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+    <nav id="mainNav">
+      <a href="#home">Home</a><a href="#menu">Our Menu</a><a href="#about">Our Story</a><a href="#nutrition">Nutrition</a><a href="#reviews">Reviews</a><a href="#location">Location</a>
+    </nav>
+    <button class="cart-button" id="cartOpen">Your tray <span id="cartCount">0</span></button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><i></i> YOUR EVERYDAY PROTEIN CAFÉ</div>
+        <h1>GOOD FOOD.<br><em>STRONG</em> STARTS.</h1>
+        <p>Breakfast and brunch made for real life. Discover delicious, protein-focused meals with the carbs and goodness to keep you going.</p>
+        <div class="hero-actions"><a class="btn btn-orange" href="#menu">Explore the menu <span>↗</span></a><a class="text-link" href="#nutrition">Know what’s in your plate ↓</a></div>
+        <div class="hero-proof"><span>🥑 Balanced plates</span><span>🥚 Protein-forward</span><span>🌱 Fresh ingredients</span></div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-image"><img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1100&q=85" alt="Fresh balanced breakfast bowl"></div>
+        <div class="round-stamp"><b>FUEL</b><span>YOUR</span><b>DAY!</b><small>PROTEIN • CARBS • GOOD VIBES</small></div>
+        <div class="floating-note"><span>🥗</span><div><b>Made to nourish</b><small>Big flavour, balanced plates</small></div></div>
+      </div>
+    </section>
+
+    <section class="ticker"><div>PROTEIN <b>✳</b> CARBS <b>✳</b> GOOD VIBES <b>✳</b> PROTEIN <b>✳</b> CARBS <b>✳</b> GOOD VIBES <b>✳</b> PROTEIN <b>✳</b> CARBS <b>✳</b> GOOD VIBES</div></section>
+
+    <section class="order-mode-section section-pad" id="orderMode">
+      <div class="eyebrow"><i></i> HOW WOULD YOU LIKE IT?</div><h2>YOUR FOOD, <em>YOUR WAY.</em></h2>
+      <div class="order-mode-grid">
+        <button class="mode-card active" data-mode="Dine-in"><span>🍽️</span><b>Dine-in</b><small>Enjoy your meal at our café</small></button>
+        <button class="mode-card" data-mode="Takeaway"><span>🥡</span><b>Takeaway</b><small>Pick up your order from us</small></button>
+        <button class="mode-card" data-mode="Home Delivery"><span>🛵</span><b>Home Delivery</b><small>Fresh fuel delivered to you</small></button>
+      </div>
+    </section>
+
+    <section class="menu-section section-pad" id="menu">
+      <div class="section-heading">
+        <div><div class="eyebrow"><i></i> THE GOOD STUFF</div><h2>FIND YOUR <em>FUEL.</em></h2><p>Fresh favourites, with nutrition details right there on the menu.</p></div>
+        <div class="menu-search"><input id="searchInput" type="search" placeholder="Search meals..." aria-label="Search menu"><span>⌕</span></div>
+      </div>
+      <div class="diet-filters"><button class="diet-filter active" data-diet="All">All menu</button><button class="diet-filter" data-diet="Veg">🌱 Veg</button><button class="diet-filter nonveg" data-diet="Non-Veg">🍗 Non-Veg</button></div>
+      <div class="filters" id="filters">
+        <button class="filter active" data-category="All">All items</button>
+        <button class="filter" data-category="Breakfast">Breakfast</button>
+        <button class="filter" data-category="Bowls">Protein bowls</button>
+        <button class="filter" data-category="Brunch">Brunch</button>
+        <button class="filter" data-category="Drinks">Smoothies & drinks</button>
+        <button class="filter" data-category="Snacks">Healthy snacks</button>
+      </div>
+      <div class="menu-grid" id="menuGrid"></div>
+      <p class="nutrition-note">Nutrition values are illustrative estimates per serving and may vary with ingredients and preparation. Ask our team about allergens before ordering.</p>
+    </section>
+
+    <section class="feature-band" id="nutrition">
+      <div class="feature-photo"><img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1100&q=85" alt="Colourful fresh salad bowl"></div>
+      <div class="feature-copy">
+        <div class="eyebrow light"><i></i> FOOD THAT MAKES SENSE</div>
+        <h2>MORE THAN<br><em>JUST PROTEIN.</em></h2>
+        <p>Your body needs more than one nutrient. Our menu brings together protein, carbohydrates, fats and fibre in satisfying combinations.</p>
+        <div class="macro-row"><div><b>P</b><span>PROTEIN</span></div><div><b>C</b><span>CARBS</span></div><div><b>F</b><span>GOOD FATS</span></div><div><b>F</b><span>FIBRE</span></div></div>
+        <a class="btn btn-cream" href="#menu">See what's cooking <span>↗</span></a>
+      </div>
+    </section>
+
+    <section class="story section-pad" id="about">
+      <div class="story-copy"><div class="eyebrow"><i></i> A LITTLE ABOUT US</div><h2>YOUR GO-TO<br><em>FEEL-GOOD</em><br>FOOD SPOT.</h2><p>Whether you’re heading to the gym, coming back from a workout or simply craving a nourishing breakfast, there’s a seat and a plate waiting for you.</p><p>We believe healthy food should be colourful, satisfying and full of flavour — never boring.</p><a class="text-link" href="#menu">Meet the menu ↗</a></div>
+      <div class="story-collage"><img class="story-main" src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=85" alt="Healthy meal ingredients"><img class="story-small" src="https://images.unsplash.com/photo-1505576399270-565b52d4ac71?auto=format&fit=crop&w=600&q=85" alt="Fresh healthy food"><div class="story-tag">EAT WELL.<br><b>LIVE WELL.</b></div></div>
+    </section>
+
+    <section class="reviews-section section-pad" id="reviews">
+      <div class="reviews-head"><div><div class="eyebrow"><i></i> REAL GOOD WORDS</div><h2>THE GOOD <em>REVIEWS.</em></h2><p>Good food tastes even better when shared. These are sample reviews for the website demo.</p></div><a class="text-link" href="#reviewForm">Leave a review ↓</a></div>
+      <div class="reviews-grid" id="reviewsGrid">
+        <article class="review-card"><div class="stars">★★★★★</div><p>“Loved the variety. The breakfast bowl was filling and the nutrition details made choosing easy.”</p><b>— Aanya</b><small>Sample customer review</small></article>
+        <article class="review-card"><div class="stars">★★★★★</div><p>“A fresh café idea! The paneer bowl and smoothie make a lovely brunch combination.”</p><b>— Rohan</b><small>Sample customer review</small></article>
+        <article class="review-card"><div class="stars">★★★★☆</div><p>“Great place for a balanced meal. The menu has options beyond the usual café snacks.”</p><b>— Meera</b><small>Sample customer review</small></article>
+      </div>
+      <div class="review-form-wrap" id="reviewForm"><h3>Share your experience</h3><form class="review-form" id="customerReviewForm"><input id="reviewName" required maxlength="35" placeholder="Your name"><select id="reviewRating" aria-label="Your rating"><option value="5">★★★★★ — Excellent</option><option value="4">★★★★☆ — Great</option><option value="3">★★★☆☆ — Good</option><option value="2">★★☆☆☆ — Fair</option><option value="1">★☆☆☆☆ — Needs improvement</option></select><textarea id="reviewText" required maxlength="300" placeholder="Tell us what you enjoyed..."></textarea><button class="btn btn-orange" type="submit">Post review <span>↗</span></button></form><p class="review-message" id="reviewMessage"></p></div>
+    </section>
+
+    <section class="location-section section-pad" id="location">
+      <div class="location-copy"><div class="eyebrow"><i></i> COME FIND YOUR FUEL</div><h2>GOOD FOOD.<br><em>GOOD PLACE.</em></h2><p>Drop by for a fresh breakfast, a post-workout bite or a relaxed brunch.</p>
+        <div class="location-detail"><span>📍</span><div><strong>Our café location</strong><span>Nagpur, Maharashtra, India<br><small>Same city reference as the earlier TDS Café demo website. Replace with the confirmed street address before publishing.</small></span></div></div>
+        <div class="location-detail"><span>🍽️</span><div><strong>Dine-in café</strong><span>Choose your table and place your order through the website.</span></div></div>
+        <a class="btn btn-green" href="https://www.google.com/maps/search/?api=1&query=Nagpur%2C%20Maharashtra%2C%20India" target="_blank" rel="noopener">Get directions <span>↗</span></a>
+      </div>
+      <iframe class="map-frame" title="Map showing Nagpur, Maharashtra" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Nagpur%2C%20Maharashtra%2C%20India&output=embed"></iframe>
+    </section>
+
+    <section class="cta">
+      <div class="eyebrow light"><i></i> READY WHEN YOU ARE</div><h2>WHAT'S YOUR<br><em>PROTEIN PLAN?</em></h2><p>Pick your favourites. We’ll take care of the flavour.</p><a class="btn btn-orange" href="#menu">Build your tray <span>↗</span></a>
+    </section>
+  </main>
+
+  <footer><a class="footer-brand" href="#home">WHERE IS MY <b>PROTEIN?</b></a><p>Protein • Carbs • Good Vibes</p><div class="footer-links"><a href="#home">Home</a><a href="#menu">Menu</a><a href="#about">Our story</a><a href="#reviews">Reviews</a><a href="#location">Location</a></div><small>“Fuel your body, feed your goals, and enjoy every bite.”</small><br><small>© <span id="year"></span> Where Is My Protein? Protein Café. Made with good energy.</small></footer>
+
+  <div class="modal-wrap" id="loginModal">
+    <div class="modal login-modal"><button class="close-button modal-x" data-close="loginModal">×</button>
+      <div class="eyebrow"><i></i> MEMBER ACCESS</div><h3>Welcome to <em>your fuel stop.</em></h3>
+      <div class="login-tabs"><button class="login-tab active" data-auth="login">Login</button><button class="login-tab" data-auth="signup">Sign up</button></div>
+      <form id="authForm"><div id="authNameWrap" hidden><label for="authName">Your name</label><input id="authName" placeholder="Enter your name"></div>
+        <label for="authContact">Email or mobile number</label><input id="authContact" required placeholder="Enter email or mobile number">
+        <label for="authPassword">Password</label><input id="authPassword" type="password" required minlength="4" placeholder="Enter password">
+        <button class="btn btn-orange full" type="submit" id="authSubmit">Login & continue →</button>
+      </form><p class="demo-note">Demo sign-in only. This sample website does not create secure accounts or store passwords on a server.</p>
+    </div>
+  </div>
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Your order">
+    <div class="drawer-head"><div><div class="eyebrow"><i></i> YOUR SELECTION</div><h3>Your tray <span id="drawerCount">(0)</span></h3></div><button class="close-button" id="cartClose" aria-label="Close cart">×</button></div>
+    <div class="cart-items" id="cartItems"><div class="empty-cart">Your tray is looking empty.<br><a href="#menu" id="browseMenu">Find your fuel →</a></div></div>
+    <div class="cart-bottom"><div class="subtotal"><span>Subtotal</span><b id="subtotal">₹0</b></div><p class="cart-hint">Add all your favourites here first. Open Your Tray whenever you are ready to review and order.</p><button class="btn btn-orange full" id="checkoutButton">Continue to checkout <span>→</span></button></div>
+  </aside>
+
+  <div class="modal-wrap" id="checkoutModal">
+    <div class="modal">
+      <button class="close-button modal-x" data-close="checkoutModal">×</button>
+      <div class="eyebrow"><i></i> ALMOST THERE</div><h3>Let's get you <em>fuelled.</em></h3>
+      <div class="selected-mode" id="selectedModeLabel">Ordering for: Dine-in</div>
+      <div id="dineFields"><label for="tableNumber">Your table number</label><input id="tableNumber" type="number" min="1" placeholder="e.g. 04"></div>
+      <div id="deliveryFields" hidden>
+        <label for="customerFullName">Full name</label><input id="customerFullName" placeholder="Name of person receiving order">
+        <label for="customerPhone">Mobile number</label><input id="customerPhone" type="tel" inputmode="numeric" placeholder="10-digit mobile number">
+        <label for="deliveryAddress">Full delivery address</label><textarea id="deliveryAddress" rows="2" placeholder="Flat/house no., building, street"></textarea>
+        <label for="deliveryLandmark">Landmark</label><input id="deliveryLandmark" placeholder="Nearby landmark">
+        <label for="deliveryArea">Area / locality</label><input id="deliveryArea" placeholder="Area or locality">
+        <label for="deliveryCity">City</label><input id="deliveryCity" placeholder="City">
+        <label for="deliveryPin">PIN code</label><input id="deliveryPin" inputmode="numeric" maxlength="6" placeholder="6-digit PIN code">
+        <label for="deliveryInstructions">Delivery instructions (optional)</label><textarea id="deliveryInstructions" rows="2" placeholder="Gate, floor or other instructions"></textarea>
+      </div>
+      <div id="takeawayFields" hidden><label for="pickupName">Pickup name</label><input id="pickupName" placeholder="Name for pickup"><label for="pickupPhone">Mobile number</label><input id="pickupPhone" type="tel" placeholder="10-digit mobile number"></div>
+      <label for="couponInput">Got a coupon?</label><div class="coupon-row"><input id="couponInput" placeholder="Enter code"><button id="applyCoupon">Apply</button></div>
+      <div class="coupon-options"><button type="button" class="coupon-chip" data-coupon="FUEL10">FUEL10 · 10% OFF</button><button type="button" class="coupon-chip" data-coupon="FIT15">FIT15 · 15% OFF</button><button type="button" class="coupon-chip" data-coupon="PROTEIN50">PROTEIN50 · ₹50 OFF</button><button type="button" class="coupon-chip" data-coupon="POWER20">POWER20 · 20% OFF</button></div><p class="coupon-message" id="couponMessage"></p>
+      <div class="bill-line"><span>Subtotal</span><b id="checkoutSubtotal">₹0</b></div><div class="bill-line discount-line"><span>Coupon discount</span><b id="discountAmount">−₹0</b></div><div class="bill-line"><span>GST (5%)</span><b id="checkoutGst">₹0</b></div><div class="bill-line total-line"><span>Grand total</span><b id="checkoutTotal">₹0</b></div>
+      <button class="btn btn-orange full" id="placeOrder">Place order <span>→</span></button>
+      <small class="demo-note">Demo website: orders are simulated in this browser and are not sent to a café kitchen.</small>
+    </div>
+  </div>
+
+  <div class="modal-wrap" id="trackingModal">
+    <div class="modal">
+      <button class="close-button modal-x" data-close="trackingModal">×</button>
+      <div class="eyebrow"><i></i> ORDER SENT</div><h3>Your order is <em>confirmed!</em></h3><p class="order-sent-note">Your order has been sent to the café counter.</p>
+      <p class="order-id" id="orderId"></p>
+      <div class="tracking-steps" id="trackingSteps"><div class="track-step current"><i>1</i><span>New order</span></div><div class="track-step"><i>2</i><span>Preparing</span></div><div class="track-step"><i>3</i><span>Ready</span></div><div class="track-step"><i>4</i><span>Served</span></div></div>
+      <p class="demo-note" id="trackingMessage">Your order has been received. Follow its progress below.</p>
+      <p class="demo-note">Your order status updates automatically from New Order to Preparing, Ready and Served.</p>
+    </div>
+  </div>
+
+  <div class="modal-wrap" id="billModal">
+    <div class="modal bill-modal">
+      <button class="close-button modal-x" data-close="billModal">×</button>
+      <div class="bill-top"><div style="font-family:Outfit;font-size:21px;font-weight:900;letter-spacing:1px;color:var(--green)">WHERE IS MY PROTEIN?</div><div style="font-size:9px;letter-spacing:2px;color:var(--orange);font-weight:900;margin:5px 0 12px">PROTEIN • CARBS • GOOD VIBES</div><div class="eyebrow"><i></i> THANK YOU FOR EATING WELL</div><h3>Your <em>bill.</em></h3><p id="billOrderId"></p></div>
+      <div id="billItems"></div><div class="bill-line"><span>Subtotal</span><b id="billSubtotal"></b></div><div class="bill-line discount-line"><span>Coupon discount</span><b id="billDiscount"></b></div><div class="bill-line"><span>GST (5%)</span><b id="billGst"></b></div><div class="bill-line total-line"><span>Total paid</span><b id="billTotal"></b></div>
+      <p class="bill-thanks">GOOD FOOD. GOOD MOOD. SEE YOU AGAIN!</p><button class="print-button" id="printBill">▤ Print this bill</button><button class="btn btn-orange full" id="finishOrder">Done</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
