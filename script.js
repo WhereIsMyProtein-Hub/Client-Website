@@ -34,5 +34,5 @@ $('filters').addEventListener('click',e=>{let b=e.target.closest('[data-category
 document.querySelectorAll('.mode-card').forEach(b=>b.addEventListener('click',()=>selectOrderMode(b.dataset.mode)));
 document.querySelectorAll('.quick-mode').forEach(b=>b.addEventListener('click',()=>selectOrderMode(b.dataset.quickMode)));
 document.querySelectorAll('.login-tab').forEach(b=>b.addEventListener('click',()=>{authMode=b.dataset.auth;document.querySelectorAll('.login-tab').forEach(x=>x.classList.toggle('active',x===b));$('authNameWrap').hidden=authMode!=='signup';$('authSubmit').textContent=authMode==='signup'?'Create account & continue →':'Login & continue →';}));
-$('authForm').onsubmit=e=>{e.preventDefault();if(authMode==='signup'&&!$('authName').value.trim()){alert('Please enter your name.');return}isLoggedIn=true;customerName=authMode==='signup'?$('authName').value.trim():$('authContact').value.trim();hideModal('loginModal');if(pendingMenuId!==null){let id=pendingMenuId;pendingMenuId=null;addItem(id)}else if(Object.keys(cart).length){openCart()}};
+// Firebase authentication handlers are installed by firebase-auth.js.
 renderMenu();updateCart();

@@ -16,3 +16,6 @@
 .footer-quote .quote-mark{font-family:Georgia,serif;color:var(--orange);font-size:38px;line-height:1}
 .brand img{width:48px;height:48px;object-fit:contain;flex-shrink:0}
 @media(max-width:650px){.footer-quote{gap:6px;padding:16px 8px}.footer-quote .quote-mark{font-size:28px}}
+
+/* Firebase account controls */
+#accountButton{margin-right:8px;max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap} .auth-link{display:inline-block;margin:12px 12px 0 0;padding:6px 0;background:transparent;border:0;color:#146048;text-decoration:underline;cursor:pointer;font:inherit} #authMessage{line-height:1.5} #authMessage.error{color:#b42318} @media(max-width:600px){#accountButton{font-size:11px;padding:8px;max-width:115px}}
