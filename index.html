@@ -12,6 +12,12 @@
 </head>
 <body>
   <div class="announcement">FUEL YOUR DAY RIGHT <span>•</span> FRESHLY PREPARED <span>•</span> GOOD FOOD, GOOD VIBES</div>
+  <div class="quick-order-modes" role="group" aria-label="Choose order type">
+    <span class="quick-order-label">ORDER TYPE:</span>
+    <button type="button" class="quick-mode active" data-quick-mode="Dine-in" aria-pressed="true">🍽️ Dine In</button>
+    <button type="button" class="quick-mode" data-quick-mode="Takeaway" aria-pressed="false">🥡 Takeaway</button>
+    <button type="button" class="quick-mode" data-quick-mode="Home Delivery" aria-pressed="false">🛵 Home Delivery</button>
+  </div>
   <header class="site-header">
     <a class="brand" href="#home" aria-label="Where Is My Protein home">
       <img src="assets/logo.png" alt="Where Is My Protein café logo">
@@ -37,17 +43,6 @@
         <div class="hero-image"><img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1100&q=85" alt="Fresh balanced breakfast bowl"></div>
         <div class="round-stamp"><b>FUEL</b><span>YOUR</span><b>DAY!</b><small>PROTEIN • CARBS • GOOD VIBES</small></div>
         <div class="floating-note"><span>🥗</span><div><b>Made to nourish</b><small>Big flavour, balanced plates</small></div></div>
-      </div>
-    </section>
-
-    <section class="ticker"><div>PROTEIN <b>✳</b> CARBS <b>✳</b> GOOD VIBES <b>✳</b> PROTEIN <b>✳</b> CARBS <b>✳</b> GOOD VIBES <b>✳</b> PROTEIN <b>✳</b> CARBS <b>✳</b> GOOD VIBES</div></section>
-
-    <section class="order-mode-section section-pad" id="orderMode">
-      <div class="eyebrow"><i></i> HOW WOULD YOU LIKE IT?</div><h2>YOUR FOOD, <em>YOUR WAY.</em></h2>
-      <div class="order-mode-grid">
-        <button class="mode-card active" data-mode="Dine-in"><span>🍽️</span><b>Dine-in</b><small>Enjoy your meal at our café</small></button>
-        <button class="mode-card" data-mode="Takeaway"><span>🥡</span><b>Takeaway</b><small>Pick up your order from us</small></button>
-        <button class="mode-card" data-mode="Home Delivery"><span>🛵</span><b>Home Delivery</b><small>Fresh fuel delivered to you</small></button>
       </div>
     </section>
 
@@ -104,12 +99,9 @@
       <iframe class="map-frame" title="Map showing Nagpur, Maharashtra" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Nagpur%2C%20Maharashtra%2C%20India&output=embed"></iframe>
     </section>
 
-    <section class="cta">
-      <div class="eyebrow light"><i></i> READY WHEN YOU ARE</div><h2>WHAT'S YOUR<br><em>PROTEIN PLAN?</em></h2><p>Pick your favourites. We’ll take care of the flavour.</p><a class="btn btn-orange" href="#menu">Build your tray <span>↗</span></a>
-    </section>
   </main>
 
-  <footer><a class="footer-brand" href="#home">WHERE IS MY <b>PROTEIN?</b></a><p>Protein • Carbs • Good Vibes</p><div class="footer-links"><a href="#home">Home</a><a href="#menu">Menu</a><a href="#about">Our story</a><a href="#reviews">Reviews</a><a href="#location">Location</a></div><small>“Fuel your body, feed your goals, and enjoy every bite.”</small><br><small>© <span id="year"></span> Where Is My Protein? Protein Café. Made with good energy.</small></footer>
+  <footer><a class="footer-brand" href="#home">WHERE IS MY <b>PROTEIN?</b></a><p>Protein • Carbs • Good Vibes</p><div class="footer-links"><a href="#home">Home</a><a href="#menu">Menu</a><a href="#about">Our story</a><a href="#reviews">Reviews</a><a href="#location">Location</a></div><div class="footer-quote"><span class="quote-mark">“</span><p>Fresh flavours. Feel-good moments.<br>Every bite worth coming back for.</p><span class="quote-mark">”</span></div><small>© <span id="year"></span> Where Is My Protein? Protein Café. Made with good energy.</small></footer>
 
   <div class="modal-wrap" id="loginModal">
     <div class="modal login-modal"><button class="close-button modal-x" data-close="loginModal">×</button>
@@ -169,7 +161,7 @@
     <div class="modal bill-modal">
       <button class="close-button modal-x" data-close="billModal">×</button>
       <div class="bill-top"><div style="font-family:Outfit;font-size:21px;font-weight:900;letter-spacing:1px;color:var(--green)">WHERE IS MY PROTEIN?</div><div style="font-size:9px;letter-spacing:2px;color:var(--orange);font-weight:900;margin:5px 0 12px">PROTEIN • CARBS • GOOD VIBES</div><div class="eyebrow"><i></i> THANK YOU FOR EATING WELL</div><h3>Your <em>bill.</em></h3><p id="billOrderId"></p></div>
-      <div id="billItems"></div><div class="bill-line"><span>Subtotal</span><b id="billSubtotal"></b></div><div class="bill-line discount-line"><span>Coupon discount</span><b id="billDiscount"></b></div><div class="bill-line"><span>GST (5%)</span><b id="billGst"></b></div><div class="bill-line total-line"><span>Total paid</span><b id="billTotal"></b></div>
+      <div id="billItems"></div><p class="bill-fulfilment" id="billFulfilment"></p><div class="bill-line"><span>Subtotal</span><b id="billSubtotal"></b></div><div class="bill-line discount-line"><span>Coupon discount</span><b id="billDiscount"></b></div><div class="bill-line"><span>GST (5%)</span><b id="billGst"></b></div><div class="bill-line total-line"><span>Total paid</span><b id="billTotal"></b></div>
       <p class="bill-thanks">GOOD FOOD. GOOD MOOD. SEE YOU AGAIN!</p><button class="print-button" id="printBill">▤ Print this bill</button><button class="btn btn-orange full" id="finishOrder">Done</button>
     </div>
   </div>
